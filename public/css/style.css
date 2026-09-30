@@ -1,0 +1,273 @@
+/* 1. Importação da fonte Fraunces (peso 700 para o título) */
+@import url('https://googleapis.com');
+@import url('https://googleapis.com');
+@import url(./colors.css);
+@import url(./animation.css);
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fraunces', serif;
+    /* ATENÇÃO: Verifique se estas duas variáveis existem no seu colors.css */
+    background-color: var(--off-white, #fcf8f2); 
+    color: var(--cinza-escuro, #333333); 
+}
+
+header {
+    font-family: 'Fraunces', serif;
+    background-color: var(--marrom-escuro);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;     
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transição suave adicionada aqui */
+}
+
+nav a:hover {
+    color: #ffd699;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px;
+    background: linear-gradient(120deg, var(--bege-claro), var(--bege-quente), var(--bege-claro));
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    animation-delay: 2s;
+}
+
+.texto-banner {
+    width: 45%;
+    animation: slideInLeft 2s ease-out forwards; 
+}
+
+.texto-banner h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: var(--marrom-escuro);
+}
+
+.texto-banner p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 28px;
+}
+
+.banner img {
+    width: 35%;
+    border-radius: 10px;
+    object-fit: cover;
+    animation: slideInRight 2s ease-out forwards;  /* Adicionando animação de movimento */
+}
+
+button {
+    background-color: var(--marrom-escuro);
+    height: 45px; /* Ajustado ligeiramente para melhor proporção */
+    width: 240px; /* Ajustado para o texto longo não quebrar */
+    color: var(--branco, #ffffff); /* Fallback caso --branco não exista */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    transform: scale(1.03);
+    filter: brightness(1.2);
+}
+
+.button_cardapio{
+    text-decoration: none;
+    color: var(--branco, #ffffff);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.titulo{
+    font-family: 'Fraunces', serif;
+    text-align: center;
+    margin: 40px 0;
+    color: var(--marrom-escuro);
+    font-size: 2.5rem;          /* Tamanho ideal para destacar na tela */
+    font-weight: 700;           /* Peso em negrito para dar presença */          
+    letter-spacing: -0.02em;    /* Ajuste fino para aproximar as letras serifadas */
+    animation: flutuar 3s ease-in-out infinite; /* Animação de flutuação */
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 24px clamp(16px, 4vw, 48px) 60px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.card{
+    background: #fff;
+    border: 1px solid rgba(92, 61, 46, 0.1);
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(92, 61, 46, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card.appear{
+    animation: cardReveal 1.5s ease-out forwards;
+}
+
+.card-img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.card h3,
+.card p{
+    padding: 0 20px;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.card-heading{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 18px 20px 8px;
+}
+
+.card h3{
+    margin: 0;
+    padding: 0;
+    color: var(--marrom-escuro);
+    font-size: 1.35rem;
+}
+
+.card-price{
+    flex-shrink: 0;
+    color: var(--marrom-médio);
+    font-size: 1rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.card p{
+    margin: 0 20px 22px;
+    flex-grow: 1;
+    color: #6f625a;
+    line-height: 1.55;
+}
+
+.card:hover{
+    transform: translateY(-7px);
+    box-shadow: 0 16px 30px rgba(92, 61, 46, 0.18);
+}
+
+.card:hover .card-img{
+    transform: scale(1.04);
+}
+
+.button-card{
+    width: calc(100% - 40px);
+    min-height: 44px;
+    margin: 0 20px 22px;
+    border-radius: 10px;
+    background: var(--marrom-escuro);
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    font-family: 'Fraunces', serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+footer{
+    background-color: var(--marrom-escuro);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 100px;
+    border-top: 4px solid var(--marrom-médio);
+}
+
+footer h2{
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+footer h4{
+    font-size: 1rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+footer h4 a{
+    color: #f8f5f2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 10px;
+}
+
+footer h4 a:hover{
+    color: var(--bege-quente);
+    text-decoration: underline;
+}
+
+footer p{
+    font-size: 0.9rem;
+    opacity: 0.9;
+}

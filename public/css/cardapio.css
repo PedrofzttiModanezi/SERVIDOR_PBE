@@ -1,0 +1,212 @@
+/* ============================================
+   CARDÁPIO (cardapio.html)
+   Cores fixas de propósito: funciona com
+   qualquer colors.css. Troque se quiser usar
+   variáveis (ex: var(--caramelo)).
+   ============================================ */
+
+.menu {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+}
+
+.menu-descricao {
+    text-align: center;
+    color: #7a7a7a;
+    margin-top: -5px;
+}
+
+.menu-categorias {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+@media (min-width: 900px) {
+    .menu-categorias {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 50px;
+    }
+}
+
+.menu-subtitulo {
+    font-size: 1.5rem;
+    color: #6f4e37;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #c8a27a;
+}
+
+.menu-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* --- Card comprido e fino (horizontal) --- */
+.menu-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #ffffff 0%, #fffaf5 100%);
+    border: 1px solid rgba(111, 78, 55, 0.1);
+    border-radius: 16px;
+    padding: 12px 16px;
+    box-shadow: 0 6px 18px rgba(92, 61, 46, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(92, 61, 46, 0.14);
+}
+
+/* --- Imagem no canto --- */
+.menu-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0; /* impede a imagem de ser esmagada */
+    box-shadow: 0 3px 8px rgba(92, 61, 46, 0.16);
+}
+
+.menu-info {
+    flex: 1;
+    min-width: 0;
+}
+
+/* --- Nome e preço na mesma linha --- */
+.menu-topo {
+    display: flex;
+    align-items: baseline;
+}
+
+.menu-topo h4 {
+    font-size: 1.05rem;
+    color: #3e2b1f;
+}
+
+/* Linha pontilhada estilo cardápio tradicional */
+.menu-pontos {
+    flex: 1;
+    min-width: 15px;
+    border-bottom: 2px dotted #d9c4ae;
+    margin: 0 10px;
+    transform: translateY(-4px);
+}
+
+/* --- PREÇO DESTACADO --- */
+.menu-preco {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #b5651d;
+    background-color: #fdf0e0;
+    padding: 3px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.menu-info p {
+    margin-top: 4px;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: #7a7a7a;
+}
+
+/* ============================================
+   FILTROS
+   ============================================ */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px 0 40px;
+}
+
+.filtro-btn {
+    padding: 8px 20px;
+    border: 2px solid #c8a27a;
+    border-radius: 999px;
+    background-color: transparent;
+    color: #6f4e37;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filtro-btn:hover {
+    background-color: #fdf0e0;
+    transform: translateY(-2px);
+}
+
+.filtro-btn.ativo {
+    background-color: #6f4e37;
+    border-color: #6f4e37;
+    color: #ffffff;
+}
+
+/* Animação quando a categoria aparece ao filtrar */
+.menu-categoria {
+    animation: aparecerMenu 0.4s ease;
+}
+
+@keyframes aparecerMenu {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Com apenas 1 categoria visível, centraliza em coluna única
+   (precisa vir DEPOIS do @media acima para vencer no desktop) */
+.menu-categorias.filtro-unico {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   BOTÃO VOLTAR AO TOPO
+   ============================================ */
+#botao-topo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: #6f4e37;
+    color: #ffffff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+
+    /* Escondido por padrão, aparece ao rolar */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+}
+
+#botao-topo.visivel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#botao-topo:hover {
+    background-color: #b5651d;
+    transform: translateY(-3px);
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 400px) {
+    .menu-img { width: 64px; height: 64px; }
+    .menu-pontos { display: none; }
+    .menu-topo { justify-content: space-between; }
+}

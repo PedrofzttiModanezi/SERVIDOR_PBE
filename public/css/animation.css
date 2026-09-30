@@ -1,0 +1,100 @@
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+ 
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px); /* Começa 50px deslocado para a direita */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Termina na posição original */
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px); /* Começa 50px para a esquerda */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Termina na posição original */
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); /* Começa deslocado para baixo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição original */
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(50px); /* Começa pequeno e deslocado */
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0); /* Cresce até o tamanho normal */
+  }
+}
+
+@keyframes cardReveal {
+  0% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes flutuar{
+  0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+/* ============================================
+   ANIMAÇÕES
+   ============================================ */
+
+/* Entrada do texto do banner */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.texto-banner {
+    animation: fadeIn 1s ease both;
+}
+
+/* Flutuação suave da imagem do banner */
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+}
+
+.banner img {
+    animation: flutuar 5s ease-in-out infinite;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café com Arôma</title>
+    <!-- Importação na ordem correta: Cores -> Animações -> Estilos gerais -->
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header id="início">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo do Café com Arôma">
+            <h2 class="logo-text">Seu café preferido</h2>
+        </div>
+        <nav>
+            <a href="#início">Início</a>
+            <a href="./cardapio.html">Cardápio</a>
+            <a href="./cardapio2.html">Cardápio 2</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="texto-banner">
+            <h1>O melhor café da cidade</h1>
+            <p>Descubra sabores únicos preparados com grãos selecionados e desfrute de um ambiente acolhedor e agradável para conhecer a verdadeira essência do café!</p>
+            <button><a class="button_cardapio" href="./cardapio.html">Conheça o nosso cardápio</a></button>
+        </div>
+        <img src="../img/banner.jpg" alt="Banner do Café com Arôma">
+    </section>
+
+    <main>
+
+        <h2 id="cardápio" class="titulo">Nossos Destaques</h2>
+
+        <section class="cards">
+
+            <div class="card">
+
+                <img class="card-img" src="../img/cappuccino.jpg" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Leite vaporizado, espuma cremosa e muito sabor para amantes de café e todas as suas variações. Opção mais escolhida e popular da casa.</p>
+
+                <button class="button-card">Adicionar ao Carrinho</button>
+
+            </div>
+
+            <div class="card">
+
+                <img class="card-img" src="../img/expresso.jpg" alt="Expresso">
+                <h3>Expresso</h3>
+                <p>Um clássico que nunca sai de moda. Nosso expresso é feito com grãos selecionados, garantindo um sabor intenso e aroma irresistível.</p>
+
+                <button class="button-card">Adicionar ao Carrinho</button>
+
+            </div>
+
+            <div class="card">
+
+                <img class="card-img" src="../img/chocolate.jpg" alt="Chocolate Quente">
+                <h3>Chocolate Quente</h3>
+                <p>Uma combinação deliciosa de chocolate quente e leite vaporizado, perfeita para aquecer o coração de todos os nossos clientes.</p>
+
+                <button class="button-card">Adicionar ao Carrinho</button>
+
+            </div>
+
+        </section>
+        
+    </main>
+
+
+    <footer>
+        <section id="contato">
+        <h2>Café Aroma</h2>
+        <h4><a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">WhatsApp</a></h4>
+        <p>&copy; 2024 Café com Arôma. Todos os direitos reservados.</p>
+        </section>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio | Café com Arôma</title>
+    <!-- Importação na ordem correta: Cores -> Animações -> Estilos gerais -> Cardápio -->
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cardapio.css">
+</head>
+<body>
+    <header id="topo">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo do Café com Arôma">
+            <h2 class="logo-text">Seu café preferido</h2>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cardapio.html" class="ativo">Cardápio</a>
+            <a href="cardapio2.html">Cardápio 2</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="cardápio" class="menu">
+            <h2 class="titulo">Cardápio</h2>
+            <p class="menu-descricao">Sabores preparados com grãos selecionados e muito carinho. Escolha o seu!</p>
+
+            <!-- Filtros por categoria -->
+            <div class="filtros" role="group" aria-label="Filtrar por categoria">
+                <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="cafes">Cafés</button>
+                <button class="filtro-btn" data-categoria="quentes">Bebidas Quentes</button>
+                <button class="filtro-btn" data-categoria="frias">Bebidas Frias</button>
+                <button class="filtro-btn" data-categoria="acompanhamentos">Acompanhamentos</button>
+            </div>
+
+            <div class="menu-categorias">
+
+                <!-- ===== CAFÉS ===== -->
+                <div class="menu-categoria" data-categoria="cafes">
+                    <h3 class="menu-subtitulo">Cafés</h3>
+                    <div class="menu-lista">
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/expresso.jpg" alt="Expresso">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Expresso</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 6,00</span>
+                                </div>
+                                <p>Um clássico que nunca sai de moda. Grãos selecionados para um sabor intenso e aroma irresistível.</p>
+                            </div>
+                        </article>
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/cappuccino.jpg" alt="Cappuccino">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Cappuccino</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 10,00</span>
+                                </div>
+                                <p>Leite vaporizado, espuma cremosa e muito sabor. A opção mais escolhida e popular da casa.</p>
+                            </div>
+                        </article>
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/latte.jpg" alt="Latte">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Latte</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 9,00</span>
+                                </div>
+                                <p>Expresso suave com leite vaporizado e fina camada de espuma. Cremoso e aveludado.</p>
+                            </div>
+                        </article>
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/mocha.jpg" alt="Mocha">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Mocha</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 11,00</span>
+                                </div>
+                                <p>A união perfeita entre expresso, chocolate ao leite e leite vaporizado, finalizado com cacau em pó.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- ===== BEBIDAS QUENTES ===== -->
+                <div class="menu-categoria" data-categoria="quentes">
+                    <h3 class="menu-subtitulo">Bebidas Quentes</h3>
+                    <div class="menu-lista">
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/chocolate.jpg" alt="Chocolate Quente">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Chocolate Quente</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 12,00</span>
+                                </div>
+                                <p>Chocolate cremoso com leite vaporizado, perfeito para aquecer o coração de todos os nossos clientes.</p>
+                            </div>
+                        </article>
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/chai.jpg" alt="Chai Latte">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Chai Latte</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 11,00</span>
+                                </div>
+                                <p>Chá preto com especiarias, leite vaporizado e um toque de mel. Aconchegante e aromático.</p>
+                            </div>
+                        </article>
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/cha.jpg" alt="Chá da Casa">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Chá da Casa</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 5,50</span>
+                                </div>
+                                <p>Blend de ervas frescas selecionadas, servido em infusão aromática.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- ===== BEBIDAS FRIAS ===== -->
+                <div class="menu-categoria" data-categoria="frias">
+                    <h3 class="menu-subtitulo">Bebidas Frias</h3>
+                    <div class="menu-lista">
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/cafe-gelado.jpg" alt="Café Gelado">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Café Gelado</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 9,00</span>
+                                </div>
+                                <p>Expresso gelado com leite e gelo. Refrescante e cheio de sabor.</p>
+                            </div>
+                        </article>
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/cold-brew.jpg" alt="Cold Brew">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Cold Brew</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 10,00</span>
+                                </div>
+                                <p>Café de extração a frio, com 12 horas de preparo para um sabor suave e marcante.</p>
+                            </div>
+                        </article>
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/frappuccino.jpg" alt="Frappuccino">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Frappuccino</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 14,00</span>
+                                </div>
+                                <p>Bebida batida com gelo, café e chantilly cremoso. Doce e refrescante.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- ===== ACOMPANHAMENTOS ===== -->
+                <div class="menu-categoria" data-categoria="acompanhamentos">
+                    <h3 class="menu-subtitulo">Acompanhamentos</h3>
+                    <div class="menu-lista">
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/pao-de-queijo.jpg" alt="Pão de Queijo">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Pão de Queijo</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 6,00</span>
+                                </div>
+                                <p>Quentinho e crocante por fora, macio por dentro. Receita da casa.</p>
+                            </div>
+                        </article>
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/croissant.jpg" alt="Croissant">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Croissant</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 8,00</span>
+                                </div>
+                                <p>Folhado na manteiga e assado fresquinho todos os dias.</p>
+                            </div>
+                        </article>
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/cookie-de-chocolate.jpg" alt="Cookie de Chocolate">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Cookie de Chocolate</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 7,00</span>
+                                </div>
+                                <p>Crocante por fora, macio por dentro, com gotas de chocolate meio amargo.</p>
+                            </div>
+                        </article>
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/bolo-cenoura.jpg" alt="Bolo de Cenoura">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Bolo de Cenoura</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 9,00</span>
+                                </div>
+                                <p>Fatia generosa com cobertura cremosa de chocolate.</p>
+                            </div>
+                        </article>
+
+                        <article class="menu-card">
+                            <img class="menu-img" src="../img/torta-de-limao.jpg" alt="Torta de Limão">
+                            <div class="menu-info">
+                                <div class="menu-topo">
+                                    <h4>Torta de Limão</h4>
+                                    <span class="menu-pontos"></span>
+                                    <span class="menu-preco">R$ 18,00</span>
+                                </div>
+                                <p>Deliciosa torta de limão com massa crocante e recheio cremoso.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <section id="contato">
+            <h2>Café Aroma</h2>
+            <h4><a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">WhatsApp</a></h4>
+            <p>&copy; 2024 Café com Arôma. Todos os direitos reservados.</p>
+        </section>
+    </footer>
+
+    <!-- Botão voltar ao topo -->
+    <button id="botao-topo" title="Voltar ao topo" aria-label="Voltar ao topo">&uarr;</button>
+
+    <script src="js/script.js"></script>
+    <script src="js/cardapioFront.js"></script>
+</body>
+</html>
